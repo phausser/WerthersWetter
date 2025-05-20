@@ -17,7 +17,8 @@ def wetter_als_gedicht(wetter, ort="Köln", dichter="Goethe"):
     temperature=0.7,
     max_tokens=100)
 
-    return response.choices[0].message.content
+    gedicht = response.choices[0].message.content
+    return f"{gedicht}\/n({dichter})"
 
 
 def get_weather(location):
